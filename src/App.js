@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './number.js'
 const user = 'By Maria '
 const num = 777
 const count = 1000 + 500;
