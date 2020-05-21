@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import './number.js'
+import {count, length} from './number.js'
 const user = 'By Maria '
 const num = 777
 const count = 1000 + 500;
@@ -15,15 +15,16 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <h1 style = {{color: '#7B68EE'}}>My first app</h1>
-        {user}
-        {num}
-        {count}
-        {log && 'is true'}
-        {log ? 1 : 2}
-        {null}
-        {undefined}
-        {false}
-        {true}
+       <p> {user} </p>
+        <p> {num}  </p>
+       <p> {counts} </p>
+        <p> {log && 'is true'} </p>
+        <p> {log ? 1 : 2} </p>
+       <p> {null} </p>
+        <p> {undefined} </p>
+       <p> {false} </p>
+       <p> {true} </p>
+       <h2> Count * length = {count} * {length} </h2>
 
         <a
           className="App-link"
