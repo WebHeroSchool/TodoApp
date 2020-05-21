@@ -1,6 +1,7 @@
 
 const count = 1;
 const length = 979
- export {count , length }
+const generate = count * length
+ export {generate }
 
 
