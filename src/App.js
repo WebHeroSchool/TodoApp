@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {count, length} from './number.js'
+import {generate} from './number.js'
 const user = 'By Maria '
 const num = 777
 const counts = 1000 + 500;
@@ -24,7 +24,7 @@ function App() {
         <p> {undefined} </p>
        <p> {false} </p>
        <p> {true} </p>
-       <h2> Count * length = {count} * {length} </h2>
+       <h2> Count * length = {generate} </h2>
 
         <a
           className="App-link"
