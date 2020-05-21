@@ -4,7 +4,7 @@ import './App.css';
 import {count, length} from './number.js'
 const user = 'By Maria '
 const num = 777
-const count = 1000 + 500;
+const counts = 1000 + 500;
 const log = false;
 function App() {
   return (
