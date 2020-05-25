@@ -10,7 +10,7 @@ const App = () => (
   <div>
   <h1> To do list </h1>  <InputItem />
   <ItemList todoItem={todoItem} />
-   <Footer count = {3}/>
+   <Footer count = {4}/>
   </div>)
 
 
