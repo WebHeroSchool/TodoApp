@@ -3,6 +3,7 @@ import React from 'react';
 import InputItem from '../InputItem/InputItem'
 import ItemList from '../ItemList/ItemList'
 import Footer from '../Footer/Footer'
+import styles from './App.css'
 
 const todoItem = 'Сделать задание по React'
 
@@ -19,8 +20,8 @@ const App = () => {
 	 { value: 'Испечь пирог'
 	}
 	];
-	return (<div>
-  <h1> To do list </h1>  <InputItem />
+	return (<div className="content">
+  <h1 className="title"> To do list </h1>  <InputItem />
   <ItemList items={items} />
    <Footer count = {4}/>
   </div>)
