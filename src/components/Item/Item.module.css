@@ -1,0 +1,12 @@
+
+.item {
+	color: black;
+
+}
+
+.done:before {
+	content: '\2713';
+	color: blue;
+	margin-right: 10px;
+	
+}
