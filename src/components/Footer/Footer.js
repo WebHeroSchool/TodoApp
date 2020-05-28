@@ -1,3 +1,6 @@
 import React from 'react'
-const Footer = ({ count }) => (<div>Осталось: {count}</div>);
+import styles from './Footer.module.css'
+
+	const Footer = ({ count }) => (<div className = {styles.footer}>Осталось: {count}</div>);
+		
 export default Footer

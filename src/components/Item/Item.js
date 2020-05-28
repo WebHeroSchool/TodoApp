@@ -9,7 +9,8 @@ import classnames from 'classnames';
 		})
 			}>
 		{value}
-		</p>)
+		</p>
+		)
 
 	
 

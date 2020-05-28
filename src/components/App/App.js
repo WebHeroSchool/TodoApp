@@ -36,7 +36,8 @@ import classnames from 'classnames';
   		<h1 className={styles.title}> To do list </h1>  <InputItem />
   		<ItemList items={items} />
    		<Footer count = {4}/>
-  		</div>)
+  		</div>
+  	  )
  
 	}
 

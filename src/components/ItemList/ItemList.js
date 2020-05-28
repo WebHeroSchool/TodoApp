@@ -5,7 +5,9 @@ import styles from './ItemList.module.css'
 	const ItemList = ({items}) => (<ul>{items.map(item => <li className ={styles.list} key = {item.value}>
 		<Item value = {item.value} isDone ={item.isDone} />
 		</li>)}
-  		</ul>)
+  		</ul>
+  		
+  )
 
 
 export default ItemList
