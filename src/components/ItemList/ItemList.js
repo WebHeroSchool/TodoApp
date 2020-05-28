@@ -1,12 +1,13 @@
 import React from 'react'
 import Item from '../Item/Item'
+import styles from './ItemList.module.css'
 
-const ItemList = ({todoItem}) => (<ul>
-  <li> <Item todoItem = {todoItem} /></li>
-  <li> <Item todoItem = {'Учить слова по английскому'}/></li>
-  <li> <Item todoItem = {'Прочитать статью'} /></li>
-  <li> <Item todoItem = {'Сделать зарядку'} /></li>
-  <li> <Item todoItem = {'Испечь пирог'} /></li>
-  </ul>)
+	const ItemList = ({items}) => (<ul>{items.map(item => <li className ={styles.list} key = {item.value}>
+		<Item value = {item.value} isDone ={item.isDone} />
+		</li>)}
+  		</ul>
+  		
+  )
+
 
 export default ItemList
