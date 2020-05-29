@@ -6,10 +6,12 @@ import Footer from '../Footer/Footer'
 import styles from './App.module.css'
 import classnames from 'classnames';
 
-	const todoItem = 'Сделать задание по React'
 
-	const App = () => {
-		const items = [
+	class App extends React.Component {
+		
+		state = {
+
+			 items: [
 
 			{ value: 'Сделать задание по React',
 			isDone: true
@@ -30,15 +32,23 @@ import classnames from 'classnames';
 	 	{ value: 'Испечь пирог',
 	 	isDone: false
 	}
-	];
+
+	],
+		}
+
+		render() {
+			
 
 	return (<div className={styles.content}>
   		<h1 className={styles.title}> To do list </h1>  <InputItem />
-  		<ItemList items={items} />
+  		<ItemList items={this.state.items} />
    		<Footer count = {4}/>
   		</div>
   	  )
  
 	}
+	}
+	
+		
 
   export default App
