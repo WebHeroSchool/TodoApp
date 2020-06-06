@@ -1,18 +1,19 @@
 
 
 
-.item {
+  .item {
 	color: black;
 
 
 }
- .list {
+   .list {
     display: flex;
     height: 100%;
  }
 
 
-.delete {
+  .delete {
+  cursor: pointer;
    background:url('../images/icons812.png');
    background-repeat: no-repeat;
     width: 12px;
@@ -21,7 +22,6 @@
     align-self: center;
 }
 
-.done {
- opacity: .4;
-	
-}
+  .delete:hover {transform: scale(1.2);}
+
+  .done {opacity: .4;}

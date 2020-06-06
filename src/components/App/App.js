@@ -39,31 +39,62 @@ import classnames from 'classnames';
 	}
 
 	],
-	 count: 5
+	   
 
 		}
 
-onClickDone = id => {
+	onClickDone = id => {
 
-const newItemList = this.state.items.map(item => {
+	const newItemList = this.state.items.map(item => {
 	const newItem = {...item};
 	if (item.id === id) {
 		newItem.isDone = !item.isDone;
+		
 	}
 	return newItem;
 
 }) 
 
-this.setState({ items: newItemList})
-this.setState({count:this.state.count -1})
+	this.setState({ items: newItemList})
+
+
+
 }
+
+  onClickDelete =id => {
+
+	const index = this.state.items.map( item => item.id).indexOf(id)
+	this.setState( state => {
+	let {items} = state;
+	delete items[index]
+	return items})
+}
+
+	onClickAdd = item => {
+
+		this.setState(state => {
+		let {items} = state;
+		items.push({
+			id: item.length !== 0 ? item.length : 0,
+			value: item,
+			isDone: false
+		})
+
+		return items
+	})
+}
+
 		render() {
-			
+
+			const {items} = this.state;
+			const activeTasks = items.filter(item => item.isDone == false)
 
 	return (<div className={styles.content}>
-  		<h1 className={styles.title}> To do list </h1>  <InputItem />
-  		<ItemList items={this.state.items} onClickDone = {this.onClickDone} />
-   		<Footer count = {this.state.count}/>
+  		<h1 className={styles.title}> To do list </h1>  <InputItem onClickAdd = {this.onClickAdd}/>
+  		<ItemList items={this.state.items}
+  	     onClickDone = {this.onClickDone} 
+  		onClickDelete = {this.onClickDelete} />
+   		<Footer count = {activeTasks.length} />
   		</div>
   	  )
  
