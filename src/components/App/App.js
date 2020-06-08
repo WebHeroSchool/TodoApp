@@ -43,7 +43,7 @@ import classnames from 'classnames';
 
 		}
 
-	onClickDone = id => {
+  	onClickDone = id => {
 
 	const newItemList = this.state.items.map(item => {
 	const newItem = {...item};
@@ -61,12 +61,12 @@ import classnames from 'classnames';
 
 }
 
-  onClickDelete =id => {
+  onClickDelete = id => {
 
 	const index = this.state.items.map( item => item.id).indexOf(id)
 	this.setState( state => {
 	let {items} = state;
-	delete items[index]
+	items.splice(index, 1);
 	return items})
 }
 
@@ -75,7 +75,7 @@ import classnames from 'classnames';
 		this.setState(state => {
 		let {items} = state;
 		items.push({
-			id: item.length !== 0 ? item.length : 0,
+			id: item.length !== 0,
 			value: item,
 			isDone: false
 		})
@@ -87,10 +87,11 @@ import classnames from 'classnames';
 		render() {
 
 			const {items} = this.state;
-			const activeTasks = items.filter(item => item.isDone == false)
+			const activeTasks = items.filter(item => !item.isDone)
 
 	return (<div className={styles.content}>
-  		<h1 className={styles.title}> To do list </h1>  <InputItem onClickAdd = {this.onClickAdd}/>
+  		<h1 className={styles.title}> To do list </h1>
+  		<InputItem onClickAdd = {this.onClickAdd}/>
   		<ItemList items={this.state.items}
   	     onClickDone = {this.onClickDone} 
   		onClickDelete = {this.onClickDelete} />

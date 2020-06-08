@@ -5,11 +5,10 @@ import TextField from '@material-ui/core/TextField';
 
 class InputItem extends React.Component {
 
-            state = {
-			input: ''
-		
-	
+      state = {
+			  input: ''	
 };
+
 onClickAdd = () => {
  		const {input} = this.state;
  		if(input){
@@ -18,7 +17,7 @@ onClickAdd = () => {
  		}
  	}
 
- 	InputChange = event => {
+ 	inputChange = event => {
  		this.setState({input: event.target.value})
  	}
  	
@@ -27,7 +26,7 @@ onClickAdd = () => {
 
  	return (<div className = {styles.input}>
  		<TextField
- 		  onChange = {this.InputChange}
+ 		  onChange = {this.inputChange}
  		  value = {input}
           label="Добавить задание"
           id="filled-size-small"
