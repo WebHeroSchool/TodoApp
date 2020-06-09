@@ -5,36 +5,37 @@ import TextField from '@material-ui/core/TextField';
 
 class InputItem extends React.Component {
 
-      state = {
-			  input: ''	
+  state = {
+	 input: ''	
 };
 
 onClickAdd = () => {
- 		const {input} = this.state;
+ 	const {input} = this.state;
  		if(input){
- 			this.props.onClickAdd(input)
- 			this.setState({input: ''});
+ 		this.props.onClickAdd(input)
+ 		this.setState({input: ''});
  		}
- 	}
+}
 
- 	inputChange = event => {
- 		this.setState({input: event.target.value})
+inputChange = event => {
+ 	this.setState({input: event.target.value})
  	}
  	
- render () {
- 	const {input} = this.state;
+render () {
 
- 	return (<div className = {styles.input}>
- 		<TextField
- 		  onChange = {this.inputChange}
- 		  value = {input}
-          label="Добавить задание"
-          id="filled-size-small"
-          variant="filled"
-          size="small"
-        />
-        <button className = {styles.btn}onClick = {this.onClickAdd}>Добавить</button>
-        </div>);
+ const {input} = this.state;
+
+ return (<div className = {styles.input}>
+ 	<TextField
+ 		onChange = {this.inputChange}
+ 	  value = {input}
+    label="Добавить задание"
+    id="filled-size-small"
+    variant="filled"
+    size="small"
+   />
+   <button className = {styles.btn}onClick = {this.onClickAdd}>Добавить</button>
+ </div>);
  }
 }
 
