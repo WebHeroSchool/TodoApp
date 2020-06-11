@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './Item.module.css'
 import classnames from 'classnames';
 import Checkbox from '@material-ui/core/Checkbox';
+import PropTypes from 'prop-types'
 
 const Item = ({value, isDone, onClickDone, id, onClickDelete,onClickAdd}) => (
 
@@ -28,6 +29,11 @@ Item.defaultProps = {
 
 };
 
+Item.propTypes = {
+
+     isDone: PropTypes.bool.isRequired,
+     id: PropTypes.number.isRequired
+};
 
 
 export default Item
