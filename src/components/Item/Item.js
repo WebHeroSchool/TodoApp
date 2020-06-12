@@ -4,9 +4,23 @@ import classnames from 'classnames';
 import Checkbox from '@material-ui/core/Checkbox';
 import PropTypes from 'prop-types'
 
-const Item = ({value, isDone, onClickDone, id, onClickDelete,onClickAdd}) => (
+class Item extends React.Component {
+	
+	componentDidMount() {
+		console.log('componentDidMount')
+	}
 
-	<div className = {styles.list}>
+	componentDidUpdate() {
+		console.log('componentDidUpdate')
+	}
+	componentWillUnmount() {
+		console.log('componentWillUnmount')
+	}
+
+
+	render() {
+		const {value, isDone, onClickDone, id, onClickDelete,onClickAdd} = this.props;
+		return (<div className = {styles.list}>
 		<Checkbox className = {styles.box}
 		 color="primary"
 		 onClick = {() => onClickDone(id)}
@@ -20,20 +34,16 @@ const Item = ({value, isDone, onClickDone, id, onClickDelete,onClickAdd}) => (
 	 <div onClick = {() => onClickDelete(id)}
 		className = {styles.delete}>
 	 </div>
-	</div>
-	)
-
-Item.defaultProps = {
-
-    isDone: false
-
-};
-
-Item.propTypes = {
+	</div>)
+	Item.propTypes = {
 
      isDone: PropTypes.bool.isRequired,
      id: PropTypes.number.isRequired
 };
+
+	}
+}
+
 
 
 export default Item
