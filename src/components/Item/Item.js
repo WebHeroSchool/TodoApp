@@ -7,14 +7,15 @@ import PropTypes from 'prop-types'
 class Item extends React.Component {
 	
 	componentDidMount() {
-		console.log('componentDidMount')
+		this.timeID = setInterval(() => console.log('componentDidMount'), 1000)
 	}
 
 	componentDidUpdate() {
 		console.log('componentDidUpdate')
 	}
+	
 	componentWillUnmount() {
-		console.log('componentWillUnmount')
+		clearInterval(this.timeID);
 	}
 
 
@@ -35,6 +36,7 @@ class Item extends React.Component {
 		className = {styles.delete}>
 	 </div>
 	</div>)
+
 	Item.propTypes = {
 
      isDone: PropTypes.bool.isRequired,
