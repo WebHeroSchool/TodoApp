@@ -40,7 +40,17 @@ class Item extends React.Component {
 	Item.propTypes = {
 
      isDone: PropTypes.bool.isRequired,
-     id: PropTypes.number.isRequired
+     id: PropTypes.number.isRequired,
+     onClickDone: PropTypes.func.isRequired,
+     onClickDelete: PropTypes.func.isRequired,
+     onClickAdd: PropTypes.func.isRequired,
+     value: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.number.isRequired,
+
+  ])
+
+
 };
 
 	}
