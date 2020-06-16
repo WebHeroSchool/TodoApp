@@ -6,17 +6,17 @@ import PropTypes from 'prop-types'
 
 class Item extends React.Component {
 	
-	componentDidMount() {
-		this.timeID = setInterval(() => console.log('componentDidMount'), 1000)
-	}
+	// componentDidMount() {
+	// 	this.timeID = setInterval(() => console.log('componentDidMount'), 1000)
+	// }
 
-	componentDidUpdate() {
-		console.log('componentDidUpdate')
-	}
+	// componentDidUpdate() {
+	// 	console.log('componentDidUpdate')
+	// }
 	
-	componentWillUnmount() {
-		clearInterval(this.timeID);
-	}
+	// componentWillUnmount() {
+	// 	clearInterval(this.timeID);
+	// }
 
 
 	render() {
