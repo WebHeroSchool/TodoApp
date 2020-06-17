@@ -6,17 +6,17 @@ import PropTypes from 'prop-types'
 
 class Item extends React.Component {
 	
-	componentDidMount() {
-		this.timeID = setInterval(() => console.log('componentDidMount'), 1000)
-	}
+	// componentDidMount() {
+	// 	this.timeID = setInterval(() => console.log('componentDidMount'), 1000)
+	// }
 
-	componentDidUpdate() {
-		console.log('componentDidUpdate')
-	}
+	// componentDidUpdate() {
+	// 	console.log('componentDidUpdate')
+	// }
 	
-	componentWillUnmount() {
-		clearInterval(this.timeID);
-	}
+	// componentWillUnmount() {
+	// 	clearInterval(this.timeID);
+	// }
 
 
 	render() {
@@ -40,7 +40,17 @@ class Item extends React.Component {
 	Item.propTypes = {
 
      isDone: PropTypes.bool.isRequired,
-     id: PropTypes.number.isRequired
+     id: PropTypes.number.isRequired,
+     onClickDone: PropTypes.func.isRequired,
+     onClickDelete: PropTypes.func.isRequired,
+     onClickAdd: PropTypes.func.isRequired,
+     value: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.number.isRequired,
+
+  ])
+
+
 };
 
 	}

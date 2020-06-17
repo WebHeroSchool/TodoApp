@@ -1,0 +1,27 @@
+.content {
+  width: 300px;
+  margin: auto;
+}
+
+.title {
+  
+  font-family: Verdana, sans-serif;
+  color: blue;
+}
+
+  .input {
+  display: flex;
+}
+  .btn {
+  cursor: pointer;
+  color: white;
+  display: flex;
+  text-align: center;
+  padding: 15px;
+  background: blue;
+  border: none;
+}
+
+  .btn:active, .btn:focus { outline: none !important; }
+  
+  .btn:hover {transform: scale(1.1);}
