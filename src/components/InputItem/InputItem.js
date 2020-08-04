@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './InputItem.module.css'
 import TextField from '@material-ui/core/TextField';
+import plus from '../Item/images/plus.svg';
 
 
 class InputItem extends React.Component {
@@ -26,15 +27,15 @@ render () {
  const {input} = this.state;
 
  return (<div className = {styles.input}>
- 	<TextField
+ 	<TextField className = {styles.field}
  		onChange = {this.inputChange}
  	  value = {input}
     label="Добавить задание"
     id="filled-size-small"
-    variant="filled"
+    
     size="small"
    />
-   <button className = {styles.btn}onClick = {this.onClickAdd}>Добавить</button>
+   <img src = {plus} className = {styles.btn}onClick = {this.onClickAdd}/>
  </div>);
  }
 }

@@ -7,12 +7,64 @@ a:hover {
   opacity: .7;
 }
 .content {
-  width: 300px;
+  width: 700px;
   margin: 0 auto;
+}
+
+.about {
+  display: flex;
   justify-content: center;
+  width: 700px;
+  margin-bottom: 20px;
+
+}
+ .repolist {
+ padding-left: 10%;
+ }
+
+.list {
+  padding-left: 30px;
+  margin-right: 50%;
+  padding-bottom: 15px;
+  border: 1px solid #CCCCCC;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  width: 400px;
+}
+.name {
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+}
+.css_circle {
+margin-right: 5px;
+ position: relative;
+}
+.css_circle:before {
+ content: '';
+ position: absolute;
+  border-radius: 6px;
+  width: 12px;
+  height: 12px;
+  /*z-index: 1;*/
+  border: 2px solid purple;
+ background: purple;
+  left: -1.1em;
+
 }
 
 
-.list {
-  padding-bottom: 15px;
+.avatar {
+  width: 170px;
+  height: 176px;
+  margin-right: 35px;
+}
+.repo {
+  width: 700px;
+ }
+.langstring {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+
 }

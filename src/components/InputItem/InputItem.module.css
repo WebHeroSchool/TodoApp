@@ -2,6 +2,7 @@
 
 	.input {
 	display: flex;
+	justify-content: flex-start;
 }
 	.btn {
 	cursor: pointer;
@@ -9,10 +10,11 @@
 	display: flex;
 	text-align: center;
 	padding: 15px;
-	background: blue;
-	border: none;
-}
 
+}
+.field {
+	background: white;
+}
 	.btn:active, .btn:focus { outline: none !important; }
 	
 	.btn:hover {transform: scale(1.1);}

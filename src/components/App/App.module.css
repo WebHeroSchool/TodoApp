@@ -1,5 +1,6 @@
 div {
- 
+ display: block;
+ justify-content: center;
 
 }
 .item {

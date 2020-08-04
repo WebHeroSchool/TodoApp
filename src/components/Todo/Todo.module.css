@@ -1,6 +1,11 @@
 .content {
-  width: 300px;
-  margin: auto;
+  width: 700px;
+  /*margin: 0 auto;*/
+  left: 40%;
+position: absolute;
+
+
+
 }
 
 .title {
@@ -25,3 +30,11 @@
   .btn:active, .btn:focus { outline: none !important; }
   
   .btn:hover {transform: scale(1.1);}
+
+.filter {
+  margin: 0 auto;
+}
+
+a {
+  padding-right: 15px;
+}
