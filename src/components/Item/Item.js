@@ -7,13 +7,16 @@ import PropTypes from 'prop-types'
 class Item extends React.Component {
 state = {
     isEdit: false,
+    value: this.props.value
     
 }
+
 changeEdit = () => {
-     this.setState({ isEdit: true })
+     this.setState({ isEdit: !this.state.isEdit })
     }
 	updateValue = () => {
-        this.setState({ isEdit: false });
+        this.setState({ isEdit: false,
+        value: this.refs.theTextInput.value });
     }
     // componentDidMount() {
 	// 	this.timeID = setInterval(() => console.log('componentDidMount'), 1000)
@@ -35,9 +38,10 @@ changeEdit = () => {
          return (   <div>
             <input
             type = 'text'
-            defaultValue = {value}
-            value = {val}
-            ref = 'theTextInput'/>
+            defaultValue = {this.state.value}
+            ref = 'theTextInput'
+
+            />
             <button onClick = {this.changeEdit}>x</button>
             <button onClick = {this.updateValue}>Ok</button>
             </div>)
@@ -58,7 +62,7 @@ changeEdit = () => {
 		})}
       onDoubleClick = {this.changeEdit}
     >
-		{value}
+		{this.state.value}
 		</p>
 
     <p>{date} <span>{new Date().toLocaleDateString()}</span> </p>

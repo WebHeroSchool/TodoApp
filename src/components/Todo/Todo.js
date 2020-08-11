@@ -71,14 +71,23 @@ this.setState({ items: newItemList})
 }
 
 
- onClickDelete = id => {
 
-  const index = this.state.items.map( item => item.id).indexOf(id)
+//  onClickDelete = id => {
+
+//   const index = this.state.items.map( item => item.id).indexOf(id)
+//   this.setState( state => {
+//   let {items} = state;
+//   items.splice(index, 1);
+//   return items})
+// }
+ 
+ onClickDelete = id => {
+  const index = this.state.items.map( item => item.id).indexOf(id);
   this.setState( state => {
-  let {items} = state;
-  items.splice(index, 1);
-  return items})
-}
+    let {items} = state;
+  delete items[index];
+  return items })
+ } 
 
 onClickAdd = item => {
 
@@ -144,8 +153,8 @@ render() {
     onClickDone = {this.onClickDone}
     onClickDelete = {this.onClickDelete}
     onClickAdd = {this.onClickAdd}
-    startEditing = {this.startEditing}
-    renderEdit = {this.renderEdit}
+    changeEdit= {this.changeEdit}
+    updateValue = {this.updateValue}
     filter = {item.filter} />;
           }) }
         </ul>
