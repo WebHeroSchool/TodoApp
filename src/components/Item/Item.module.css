@@ -8,20 +8,27 @@
 }
    .list {
     display: flex;
+    justify-content: flex-start;
+      align-items: flex-start;
     height: 100%;
+    width: 700px;
  }
 
 
   .delete {
   cursor: pointer;
-   background:url('../images/icons812.png');
+   background:url('../Item/images/Group.svg');
    background-repeat: no-repeat;
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
     margin-left: 6px;
     align-self: center;
 }
 
+
+span {
+  padding-left: 15px;
+}
   .delete:hover {transform: scale(1.2);}
 
   .done {opacity: .4;}

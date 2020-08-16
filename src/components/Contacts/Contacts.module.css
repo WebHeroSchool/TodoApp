@@ -1,0 +1,12 @@
+.wrapper {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.socials {
+  display: flex;
+}
+
+li {
+  list-style: none;
+}
